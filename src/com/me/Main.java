@@ -19,15 +19,38 @@ public class Main {
         System.out.println(divide(x, y));
         */
 
-    //step 7 new int
-    int x = getInt();
+        //step 7 new int
+       /* int x = getInt();
+        System.out.println("x is " + x);*/
+
+        //step 10 change above to work with method 9
+        int x = getIntLBYL();
         System.out.println("x is " + x);
+
 }
 
-    //step 8 mehtod
+    //step 8 method
     private static int getInt() {
         Scanner s = new Scanner(System.in);
         return s.nextInt();
+    }
+
+    //step 9 to address input error
+    private static int getIntLBYL() {
+        Scanner s = new Scanner(System.in);
+        boolean isValid = true;
+        System.out.println("Please enter an integer ");
+        String input = s.next();
+        for(int i=0; i<input.length(); i++) {
+            if(!Character.isDigit(input.charAt(i))) {
+                isValid = false;
+                break;
+            }
+        }
+        if(isValid) {
+            return Integer.parseInt(input);
+        }
+        return 0;
     }
 
     //step 1, "look before you leap" method
