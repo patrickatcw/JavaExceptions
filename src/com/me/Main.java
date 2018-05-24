@@ -15,6 +15,9 @@ public class Main {
 
         //step 4 run results were both 0
 
+        //step 6 calling divide method to print, crashes "arithmeticexception divide by 0"
+        System.out.println(divide(x, y));
+
     }
 
     //step 1, "look before you leap" method
@@ -33,6 +36,12 @@ public class Main {
         } catch(ArithmeticException e) {
             return 0;
         }
+    }
+
+    //step 5 method
+    private static int divide(int x, int y) {
+
+        return x / y;
     }
 
 }
