@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
 
         //step 3 ints
-        int x = 98;
+       /* int x = 98;
         int y = 0;
         System.out.println(divideLBYL(x, y));   //calling method to print
         System.out.println(divideEAFP(x, y));   //calling method to print
@@ -17,7 +17,17 @@ public class Main {
 
         //step 6 calling divide method to print, crashes "arithmeticexception divide by 0"
         System.out.println(divide(x, y));
+        */
 
+    //step 7 new int
+    int x = getInt();
+        System.out.println("x is " + x);
+}
+
+    //step 8 mehtod
+    private static int getInt() {
+        Scanner s = new Scanner(System.in);
+        return s.nextInt();
     }
 
     //step 1, "look before you leap" method
