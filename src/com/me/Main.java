@@ -24,7 +24,11 @@ public class Main {
         System.out.println("x is " + x);*/
 
         //step 10 change above to work with method 9
-        int x = getIntLBYL();
+        /*int x = getIntLBYL();
+        System.out.println("x is " + x);*/
+
+        //step 12 testing this method
+        int x = getIntEAFP();
         System.out.println("x is " + x);
 
 }
@@ -51,6 +55,17 @@ public class Main {
             return Integer.parseInt(input);
         }
         return 0;
+    }
+
+    //step 11, another way than above, try catch
+    private static int getIntEAFP() {
+        Scanner s = new Scanner(System.in);
+        System.out.println("Please enter an integer ");
+        try {
+            return s.nextInt();
+        } catch(InputMismatchException e) {
+            return 0;
+        }
     }
 
     //step 1, "look before you leap" method
